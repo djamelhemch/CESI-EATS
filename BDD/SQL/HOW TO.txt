@@ -1,0 +1,4 @@
+1- Installer SQL SERVER 2019
+2- INSTALLER MSSMS (Microsoft sql server Management studio 18.1) 
+ lien > https://aka.ms/ssmsfullsetup
+3- Ouvrir MSSMS > Connectez-vous > Copier La Database a l'aide du fichier 'CESI-EATS.SQL'
