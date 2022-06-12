@@ -5,7 +5,7 @@ var menuModel = require ('../models/menuSchema');
 //post to collection
 router.post('/post', function(req, res, next) {
 
-    const  nameMenu  = req.body.name ;
+    const nameMenu  = req.body.name ;
     const pictureMenu = req.body.picture ;
     const priceMenu = req.body.price ;
     const id_restaurantMenu = req.body.id_restaurant ;
