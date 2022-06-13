@@ -9,7 +9,11 @@ const articleSchema = new mongoose.Schema({
     picture : String,
     price : String,
     id_menu : Number,
-});
+},
+{
+    versionKey: false
+}
+);
 
 const articleModel = mongoose.model('article' , articleSchema);
 

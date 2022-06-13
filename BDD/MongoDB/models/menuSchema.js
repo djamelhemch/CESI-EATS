@@ -9,7 +9,11 @@ const menuSchema = new mongoose.Schema({
     picture : String,
     price : String,
     id_restaurant : Number,
-});
+},
+{
+    versionKey: false
+}
+);
 
 const menuModel = mongoose.model('menu' , menuSchema);
 

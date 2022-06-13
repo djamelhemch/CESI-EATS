@@ -40,9 +40,20 @@ router.get('/getall', function(req, res, next) {
 // delete by id from collection
 router.delete('/delete/:id', function(req, res, next) {
     var id= req.params.id;
-    deliveryModel.find({id : id}).remove()
+    deliveryModel.findByIdAndRemove(id)
      .then(deliveryModel => res.status(200).json(deliveryModel))
      .catch(error => res.status(400).json({ error }));
+});
+
+// update by id to collection
+router.put('/put/:id', function(req, res, next) {
+
+    const id =  req.params.id ;
+    const update = { id_livraison : id_livraisonDelivery ,id_client : id_clientDelivery,id_livreur : id_livreurDelivery , status :statusDelivery };
+
+    deliveryModel.findByIdAndUpdate(id, update)
+      .then(deliveryModel => res.status(202).json(deliveryModel))
+      .catch(error => res.status(400).json({ error }));
 });
 
 

@@ -62,9 +62,20 @@ router.get('/getall', function(req, res, next) {
 // delete by id from collection
 router.delete('/delete/:id', function(req, res, next) {
     var id= req.params.id;
-    orderModel.find({id : id}).remove()
+    orderModel.findByIdAndRemove(id)
      .then(orderModel => res.status(200).json(orderModel))
      .catch(error => res.status(400).json({ error }));
+});
+
+// update by id to collection
+router.put('/put/:id', function(req, res, next) {
+
+    const id =  req.params.id ;
+    const update = { id_commande: id_commandeOrder , n_commande: n_commandeOrder , date: dateOrder , total: totalOrder , payementMethod: payementMethodOrder };
+
+    orderModel.findByIdAndUpdate(id, update)
+      .then(orderModel => res.status(202).json(orderModel))
+      .catch(error => res.status(400).json({ error }));
 });
 
 module.exports = router;

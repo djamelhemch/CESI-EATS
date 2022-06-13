@@ -8,7 +8,11 @@ const deliverySchema = new mongoose.Schema({
     id_client : Number,
     id_livreur : Number,
     status : String
-});
+},
+{
+    versionKey: false
+}
+);
 
 const deliveryModel = mongoose.model('delivery' , deliverySchema);
 

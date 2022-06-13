@@ -9,7 +9,11 @@ const orderSchema = new mongoose.Schema({
     date : Date,
     total : Number,
     payementMethod : String,
-});
+},
+{
+    versionKey: false
+}
+);
 
 const orderModel = mongoose.model('order' , orderSchema);
 
