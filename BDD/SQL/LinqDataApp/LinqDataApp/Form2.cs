@@ -25,11 +25,14 @@ namespace LinqDataApp
         }
         private void getData()
         {
+           
 
             string connetionString;
-
+            
             SqlConnection conx;
-            connetionString = @"Data Source=DESKTOP-LE69RUT\CESIEATS;Initial Catalog=CESI-EATS;User ID=admin;Password=arsenik98";
+            MessageBox.Show(Global.servName);
+            connetionString = String.Format(@"Server={0}; Database=CESI-EATS;User ID=admin;Password=12356", Global.servName);
+            MessageBox.Show(connetionString);
             conx = new SqlConnection(connetionString);
             conx.Open();
             SqlCommand command;
@@ -60,6 +63,7 @@ namespace LinqDataApp
                 }
 
                 label1.Text = selected + " Table Informations : "+"\n\n"+ Output;
+                label3.Text = Global.servName;
             }
 
             dataReader.Close();
