@@ -40,8 +40,22 @@ router.get('/getall', function(req, res, next) {
 // delete by id from collection
 router.delete('/delete/:id', function(req, res, next) {
     var id= req.params.id;
-    menuModel.find({id : id}).remove()
+    menuModel.findByIdAndRemove(id)
      .then(menuModel => res.status(200).json(menuModel))
      .catch(error => res.status(400).json({ error }));
 });
+
+// update by id to collection
+router.put('/put/:id', function(req, res, next) {
+
+    const id =  req.params.id ;
+    const update = { name: req.body.name , picture :req.body.picture ,price:req.body.price,id_restaurant: req.body.id_restaurant};
+
+    menuModel.findByIdAndUpdate(id, update)
+      .then(menuModel => res.status(202).json(menuModel))
+      .catch(error => res.status(400).json({ error }));
+});
+  
+ 
+
 module.exports = router;
