@@ -23,5 +23,48 @@ router.post('/post', function(req, res, next) {
 
 });
 
+//get to collection
+router.get('/get/:id', function(req, res, next) {
+
+    const id_commandeOrder  = req.body.id_commande ;
+    const n_commandeOrder = req.body.n_commande ;
+    const dateOrder = req.body.date ;
+    const totalOrder = req.body.total ;
+    const payementMethodOrder = req.body.payementMethod ;
+
+    const newOrder = new orderModel({ id_commande: id_commandeOrder , n_commande: n_commandeOrder , date: dateOrder , total: totalOrder , payementMethod: payementMethodOrder }) ;
+    newOrder.save(function (err, doc){
+        if(!err){ 
+            res.status(201).json({response : true , order: {statut :"created" , infos : doc   }});    
+            
+        }else{
+            res.status(404).json({response : false , error :err});
+        }
+    });
+
+});
+
+//get by id from collection
+router.get('/get/:id', function(req, res, next) {
+    var id= req.params.id;
+    orderModel.findById(id)
+     .then(orderModel => res.status(200).json(orderModel))
+     .catch(error => res.status(400).json({ error }));
+});
+
+// get all from collection
+router.get('/getall', function(req, res, next) {
+    orderModel.find()
+     .then(orderModel => res.status(200).json(orderModel))
+     .catch(error => res.status(400).json({ error }));
+});
+
+// delete by id from collection
+router.delete('/delete/:id', function(req, res, next) {
+    var id= req.params.id;
+    orderModel.find({id : id}).remove()
+     .then(orderModel => res.status(200).json(orderModel))
+     .catch(error => res.status(400).json({ error }));
+});
 
 module.exports = router;

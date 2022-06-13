@@ -22,5 +22,28 @@ router.post('/post', function(req, res, next) {
 
 });
 
+//get by id from collection
+router.get('/get/:id', function(req, res, next) {
+    var id= req.params.id;
+    deliveryModel.findById(id)
+     .then(deliveryModel => res.status(200).json(deliveryModel))
+     .catch(error => res.status(400).json({ error }));
+});
+
+// get all from collection
+router.get('/getall', function(req, res, next) {
+    deliveryModel.find()
+     .then(deliveryModel => res.status(200).json(deliveryModel))
+     .catch(error => res.status(400).json({ error }));
+});
+
+// delete by id from collection
+router.delete('/delete/:id', function(req, res, next) {
+    var id= req.params.id;
+    deliveryModel.find({id : id}).remove()
+     .then(deliveryModel => res.status(200).json(deliveryModel))
+     .catch(error => res.status(400).json({ error }));
+});
+
 
 module.exports = router;

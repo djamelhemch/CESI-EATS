@@ -21,5 +21,28 @@ router.post('/post', function(req, res, next) {
 
 });
 
+//get by id from collection
+router.get('/get/:id', function(req, res, next) {
+    var id= req.params.id;
+    articleModel.findById(id)
+     .then(articleModel => res.status(200).json(articleModel))
+     .catch(error => res.status(400).json({ error }));
+});
+
+// get all from collection
+router.get('/getall', function(req, res, next) {
+    articleModel.find()
+     .then(articleModel => res.status(200).json(articleModel))
+     .catch(error => res.status(400).json({ error }));
+});
+
+// delete by id from collection
+router.delete('/delete/:id', function(req, res, next) {
+    var id= req.params.id;
+    articleModel.find({id : id}).remove()
+     .then(articleModel => res.status(200).json(articleModel))
+     .catch(error => res.status(400).json({ error }));
+});
+
 
 module.exports = router;
