@@ -1,0 +1,11 @@
+C:\GITHUB\CESI-EATS\BDD\SQL\LinqDataApp\LinqDataApp\bin\Debug\LinqDataApp.exe.config
+C:\GITHUB\CESI-EATS\BDD\SQL\LinqDataApp\LinqDataApp\bin\Debug\LinqDataApp.exe
+C:\GITHUB\CESI-EATS\BDD\SQL\LinqDataApp\LinqDataApp\bin\Debug\LinqDataApp.pdb
+C:\GITHUB\CESI-EATS\BDD\SQL\LinqDataApp\LinqDataApp\obj\Debug\LinqDataApp.csproj.AssemblyReference.cache
+C:\GITHUB\CESI-EATS\BDD\SQL\LinqDataApp\LinqDataApp\obj\Debug\LinqDataApp.Form1.resources
+C:\GITHUB\CESI-EATS\BDD\SQL\LinqDataApp\LinqDataApp\obj\Debug\LinqDataApp.Properties.Resources.resources
+C:\GITHUB\CESI-EATS\BDD\SQL\LinqDataApp\LinqDataApp\obj\Debug\LinqDataApp.csproj.GenerateResource.cache
+C:\GITHUB\CESI-EATS\BDD\SQL\LinqDataApp\LinqDataApp\obj\Debug\LinqDataApp.csproj.CoreCompileInputs.cache
+C:\GITHUB\CESI-EATS\BDD\SQL\LinqDataApp\LinqDataApp\obj\Debug\LinqDataApp.exe
+C:\GITHUB\CESI-EATS\BDD\SQL\LinqDataApp\LinqDataApp\obj\Debug\LinqDataApp.pdb
+C:\GITHUB\CESI-EATS\BDD\SQL\LinqDataApp\LinqDataApp\obj\Debug\LinqDataApp.Form2.resources
