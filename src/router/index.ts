@@ -8,16 +8,18 @@ const routes: Array<RouteConfig> = [
   {
     path: '/',
     name: 'home',
+    redirect: '/home',
     component: HomeView
   },
   {
-    path: '/about',
-    name: 'about',
+    path: '/home',
+    name: 'home',
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
+    component: () => import( '../views/HomeView.vue')
   }
+  
 ]
 
 const router = new VueRouter({
