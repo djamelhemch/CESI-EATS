@@ -18,8 +18,24 @@ const routes: Array<RouteConfig> = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () => import( '../views/HomeView.vue')
+  },
+  {
+    path: "/restaurateur",
+    alias: "/menu",
+    name: "menu",
+    component: () => import("../views/Restaurateur.vue")
+  },
+  {
+    path: "/restaurateur/displaymenu",
+    alias: "/menu",
+    name: "menu",
+    component: () => import("../components/MenuList.vue")
+  },
+  {
+    path: "/restaurateur/addmenu",
+    name: "addmenu",
+    component: () => import("../components/MenuAdd.vue")
   }
-  
 ]
 
 const router = new VueRouter({
