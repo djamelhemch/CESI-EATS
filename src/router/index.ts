@@ -19,6 +19,7 @@ const routes: Array<RouteConfig> = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () => import( '../views/HomeView.vue')
+<<<<<<< HEAD
   }, {
     path: '/connect',
     name: 'connect',
@@ -26,6 +27,8 @@ const routes: Array<RouteConfig> = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () => import( '../views/Connection.vue')
+=======
+>>>>>>> 07e1dd531cf67143646daf4adf3125b04818ace6
   },
   {
     path: "/restaurateur",
@@ -43,12 +46,15 @@ const routes: Array<RouteConfig> = [
     path: "/restaurateur/addmenu",
     name: "addmenu",
     component: () => import("../components/MenuAdd.vue")
+<<<<<<< HEAD
   },
   {
     path: '/clients',
     name: 'clients',
 
     component: () => import( '../views/ClientsView.vue')
+=======
+>>>>>>> 07e1dd531cf67143646daf4adf3125b04818ace6
   }
 ]
 
