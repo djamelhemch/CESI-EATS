@@ -45,12 +45,14 @@
                 <span class="navbar-toggler-icon"></span>
             </button>-->
              <div id="navbarNav" class="col-md-5 col-lg-3 collapse navbar-collapse ml-5">
-                <b-button style="position : relative;background: #FFFFFF;min-height: 48px;white-space: nowrap;border-radius: 500px;
+                <router-link to="/connect"><b-button b-button v-b-modal.modal-2 style="position : relative;background: #FFFFFF;min-height: 48px;white-space: nowrap;border-radius: 500px;
       line-height: 20px;padding: 12px 16px;-webkit-box-pack: center;
     justify-content: center;    -webkit-box-align: center;
     align-items: center;width: auto;    font-weight: bolder;font-family: UberMoveText, sans-serif;box-sizing: border-box;
     color: #000000;font-size: 16px;box-shadow: 0px 0px 8px rgb(0 0 0 / 10%), 0px 4px 4px rgb(0 0 0 / 4%);"><i class="fa fa-user" style="font-size: 20px;"></i>
     Connexion</b-button>
+        </router-link>
+
     <div style="padding: 0 10px;"></div>
       <b-button style="position : relative;background: black;min-height: 48px;white-space: nowrap;border-radius: 500px;
       line-height: 20px;-webkit-box-pack: center;
@@ -62,10 +64,10 @@
        
         
     </nav>
+ 
 
-
-  
   </div>
+
 </template>
   <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator';
@@ -94,9 +96,13 @@ window.onscroll = function() {
 </script>
 
 <script lang="ts">
+const axios = require('axios');
+
+
   export default {
     data() {
       return {
+
         variant: 'dark',
       }
     }
