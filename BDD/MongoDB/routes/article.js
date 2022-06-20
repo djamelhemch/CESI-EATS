@@ -1,18 +1,34 @@
 var express = require('express');
 var router = express.Router();
 var articleModel = require ('../models/articleSchema');
+var path = require('path');
+let formidable = require('express-formidable');  
 
+router.use(formidable({
+    encoding: 'utf-8',
+    uploadDir: path.join('uploads'),
+    multiples: false,
+    keepExtensions: true// req.files to be arrays of files
+  }));
+
+
+ 
 //post to collection
 router.post('/post', function(req, res, next) {
+    console.log('Files '+JSON.stringify(req.files.picture.path));
+    console.log('Fields '+JSON.stringify(req.fields));
 
-    const nameArticle  = req.body.name ;
-    const pictureArticle = req.body.picture ;
-    const priceArticle = req.body.price ;
-    const id_menuArticle = req.body.id_menu;
+    const pictureArticle = {
+        path:  req.files.picture.path,
+        contentType: 'image/png'
+    } ;
+    const nameArticle  = req.fields.name ;
+    const priceArticle = req.fields.price ;
+    const id_menuArticle = req.fields.id_menu;
     const newarticle = new articleModel({ name : nameArticle ,picture : pictureArticle ,price : priceArticle , id_menu : id_menuArticle   }) ;
     newarticle.save(function (err, doc){
         if(!err){
-            res.status(201).json({response : true , menu: {statut :"created" , infos : doc   }});    
+            res.status(201).json({response : true , article: {statut :"created" , infos : doc   }});    
             
         }else{
             res.status(404).json({response : false , error :err});
@@ -25,6 +41,13 @@ router.post('/post', function(req, res, next) {
 router.get('/get/:id', function(req, res, next) {
     var id= req.params.id;
     articleModel.findById(id)
+     .then(articleModel => res.status(200).json(articleModel))
+     .catch(error => res.status(400).json({ error }));
+});
+
+router.get('/getbymenu/:id', function(req, res, next) {
+    var id= req.params.id;
+    articleModel.find( {id_menu : id} )
      .then(articleModel => res.status(200).json(articleModel))
      .catch(error => res.status(400).json({ error }));
 });

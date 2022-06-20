@@ -1,16 +1,34 @@
 var express = require('express');
 var router = express.Router();
 var menuModel = require ('../models/menuSchema');
+var path = require('path');
+let formidable = require('express-formidable');  
+
+router.use(formidable({
+    encoding: 'utf-8',
+    uploadDir: path.join('uploads'),
+    multiples: false,
+    keepExtensions: true// req.files to be arrays of files
+  }));
+
 
 //post to collection
 router.post('/post', function(req, res, next) {
 
-    const nameMenu  = req.body.name ;
-    const pictureMenu = req.body.picture ;
-    const priceMenu = req.body.price ;
-    const id_restaurantMenu = req.body.id_restaurant ;
+    console.log('Files '+JSON.stringify(req.files.picture.path));
+    console.log('Fields '+JSON.stringify(req.fields));
 
-    const newMenu = new menuModel({ name : nameMenu ,picture : pictureMenu,price : priceMenu , id_restaurant: id_restaurantMenu }) ;
+    const pictureMenu = {
+        path:  req.files.picture.path,
+        contentType: 'image/png'
+    } ;
+    const nameMenu  = req.fields.name ;
+    const priceMenu = req.fields.price ;
+    const id_restaurantMenu = req.fields.id_restaurant ;
+
+    const newMenu = new menuModel({ name : nameMenu ,
+        picture :pictureMenu ,
+        price : priceMenu , id_restaurant: id_restaurantMenu }) ;
     newMenu.save(function (err, doc){
         if(!err){
             res.status(201).json({response : true , menu: {statut :"created" , infos : doc   }});    

@@ -1,5 +1,5 @@
 var mongoose = require ('mongoose');
-var bddConnect = require('../bdd/mongoose');
+var bddConnect = require('../connexion/mongoose');
 
 bddConnect('CESIEATS');
 

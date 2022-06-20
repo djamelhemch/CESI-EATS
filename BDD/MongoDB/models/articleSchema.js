@@ -1,12 +1,12 @@
 var mongoose = require ('mongoose');
-var bddConnect = require('../bdd/mongoose');
+var bddConnect = require('../connexion/mongoose');
 
 bddConnect('CESIEATS');
 
 const articleSchema = new mongoose.Schema({
     id_article : Number,
     name : String,
-    picture : String,
+    picture : { path: String, contentType: String },
     price : String,
     id_menu : Number,
 },
