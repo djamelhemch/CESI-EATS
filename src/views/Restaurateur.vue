@@ -1,4 +1,5 @@
 <template>
+<<<<<<< HEAD
 
 
 
@@ -109,6 +110,22 @@
 
 
 
+=======
+  <div id="app">
+    <nav class="navbar navbar-expand navbar-dark bg-dark text-white">
+      <div class="navbar-nav mr-auto">
+        <li class="nav-item text-center">
+          <router-link to="/restaurateur/displaymenu" class="nav-link text-white">Display Menu</router-link>
+        </li>
+        <li class="nav-item text-center">
+          <router-link to="/restaurateur/addmenu" class="nav-link text-white">Add Menu</router-link>
+        </li>
+      </div>
+    </nav>
+    <div class="container mt-3">
+    </div>
+  </div>
+>>>>>>> 94e719961f743980b46948d54a1c2e7dc23bbd44
 </template>
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';

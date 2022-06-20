@@ -1,5 +1,16 @@
 <template>
 <div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  <div>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">    
+</div>
+    <div class="form-group">
+        <label>Name</label>
+        <input type="text" 
+=======
+>>>>>>> 94e719961f743980b46948d54a1c2e7dc23bbd44
   
 
 
@@ -32,7 +43,11 @@
     </div>
 <div>
 
+<<<<<<< HEAD
 <div style="padding-top:150px;">
+=======
+<body style="padding-top:150px;">
+>>>>>>> 94e719961f743980b46948d54a1c2e7dc23bbd44
 
 
 
@@ -40,13 +55,47 @@
 <div style="background:white;height:500px;width:700px;box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;">
     
     <div class="form-group" style="padding-top:20px;">
+<<<<<<< HEAD
       <div style="width:500px;background:white;height:100px;box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;"><strong><h1 style="padding-top:20px;">Ajouter un Menu</h1></strong></div>
         <label style="font-weight:700;font-size:40px;text-align:left;"></label>
         <input placeholder="Nom du menu" type="text" 
+=======
+      <div style="width:500px;background:white;height:100px;box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;"><strong><h1 style="padding-top:20px;">Ajoutez un Menu</h1></strong></div>
+        <label style="font-weight:700;font-size:40px;text-align:left;"></label>
+        <input placeholder="Nom du menu" type="text" 
+>>>>>>> 07e1dd531cf67143646daf4adf3125b04818ace6
+>>>>>>> 94e719961f743980b46948d54a1c2e7dc23bbd44
         class="form-control"
         id="name"
         required
         v-model="menu.name"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        name="name">
+    </div>
+    <div class="form-group">
+        <label>price</label>
+        <input type="number" 
+        required
+        v-model="menu.price"
+        name="price"
+        class="form-control">
+    </div>
+    <div class="custom-file form-group">
+        <input type="file" class="custom-file-input" 
+        id="picture" ref="picture" v-on:change="handleFileUpload()"
+        
+>
+        <label class="custom-file-label" for="customFile">Upload picture</label>
+    </div>
+    <div class="text-center my-3">
+        <button @click="saveMenu" class="btn btn-light text-dark">Submit</button>
+    </div>
+</div>
+</template>
+=======
+>>>>>>> 94e719961f743980b46948d54a1c2e7dc23bbd44
         name="name" style="padding: 0.875rem 1rem;
   font-size: .875rem;
   width: 500px;
@@ -79,7 +128,11 @@
     
 </div>
 </center>
+<<<<<<< HEAD
 </div></div>
+=======
+</body></div>
+>>>>>>> 94e719961f743980b46948d54a1c2e7dc23bbd44
 <div style="padding-top:50px;">
 <div><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></div>
 
@@ -153,6 +206,10 @@
 
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> 07e1dd531cf67143646daf4adf3125b04818ace6
+>>>>>>> 94e719961f743980b46948d54a1c2e7dc23bbd44
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
@@ -160,11 +217,15 @@
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator';
 @Component
+<<<<<<< HEAD
 export default class MenuAdd extends Vue created(){
     created(){
         document.title = "Restaurateur - Ajouter un menu"
     }
   }
+=======
+export default class MenuAdd extends Vue created(){}
+>>>>>>> 94e719961f743980b46948d54a1c2e7dc23bbd44
 </script>
 <style>
   @import '../assets/css/AddMenu.css';

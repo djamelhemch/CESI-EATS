@@ -4,7 +4,14 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC">
   </div>
+<<<<<<< HEAD
   <!--
+=======
+<<<<<<< HEAD
+=======
+  <!--
+>>>>>>> 07e1dd531cf67143646daf4adf3125b04818ace6
+>>>>>>> 94e719961f743980b46948d54a1c2e7dc23bbd44
   <table class="table ">
   <thead>
     <tr>
@@ -30,6 +37,34 @@
     </tr>
     
   </tbody>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+</table>
+
+    <div data-aos-duration="500" data-aos="fade-right" class="container">
+
+      <div id="menu">
+  <a href="#" style="text-decoration: none;"><div class="item"><img style ="width:80px" src="@/assets/images/burger.jpg"/>
+  <div>
+
+    <center><strong><p style="font-size: 15px;width: 200px;" :class="{ active: index == currentIndex }"
+          v-for="(Menu, index) in Menus"
+          :key="index">{{Menu.name}}</p></strong></center>
+  </div>
+  </div></a>
+  </div>
+</div>
+<div>
+  <p><b>Margherita</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$12.50</span></p>
+</div>
+  </div> 
+</template>
+<script>
+import { BootstrapVue, IconsPlugin } from 'bootstrap-vue';
+import MenuService from "../services/MenuService";
+=======
+>>>>>>> 94e719961f743980b46948d54a1c2e7dc23bbd44
 </table>-->
 
     <div>
@@ -49,15 +84,23 @@
     </div>
 <div>
 
+<<<<<<< HEAD
 <div style="padding-top:150px;">
+=======
+<body style="padding-top:150px;">
+>>>>>>> 94e719961f743980b46948d54a1c2e7dc23bbd44
 <!-- Start Content -->
  <div class="bgmenu">
 
 <div id="home" class="w3-content" style="width:700px;">
+<<<<<<< HEAD
 <center><h1 style="font-size: 45px;
     font-family: UberMove, sans-serif;
     font-weight: bolder;
     text-shadow: 5px 5px 5px white;color:black;width: 400px;">Tableau d'édition des menus</h1></center>
+=======
+<h1>Tableau d'édition des menus</h1>
+>>>>>>> 94e719961f743980b46948d54a1c2e7dc23bbd44
 <!-- Menu -->
 <div id="menu" class="w3-container w3-black w3-xxlarge w3-padding-60">
 
@@ -72,11 +115,15 @@
           :key="index">
 <p style="font-size:30px;"><b>{{Menu.name}}</b> <span class="w3-right w3-tag w3-dark-grey w3-round">{{Menu.price}} DA</span>
 <button @click="DropMenu(Menu._id)"  class="btn btn-sm mx-1 btn-danger" >Supprimer</button>
+<<<<<<< HEAD
         <button class="btn btn-sm mx-1 btn-warning">Edit</button>
         <router-link class="btn" :to="{path : '/restaurateur/addarticle', query : {id_menu :Menu._id}}"><button class="btn">Ajouter un article</button>  
 </router-link>
 <router-link class="btn" :to="{path : '/restaurateur/articleofmenu', query : {id_menu :Menu._id}}"><button class="btn">Voir les articles</button>  
 </router-link>
+=======
+        <button class="btn btn-sm mx-1 btn-warning">Edit</button>  
+>>>>>>> 94e719961f743980b46948d54a1c2e7dc23bbd44
 </p>
 <p style="font-size:20px;" class="w3-text-grey">Fresh tomatoes, fresh mozzarella, fresh basil</p>
 <hr>
@@ -90,7 +137,11 @@
 </div>
 <!-- End Content -->
 </div>
+<<<<<<< HEAD
 </div></div>
+=======
+</body></div>
+>>>>>>> 94e719961f743980b46948d54a1c2e7dc23bbd44
 <div style="padding-top:50px;">
 <div><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></div>
 
@@ -158,9 +209,15 @@
 <script>
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue';
 import MenuService from "../services/MenuService";
+<<<<<<< HEAD
 import ArticleService from "../services/ArticleService";
 import Footer from '@/components/Footer.vue';
 
+=======
+import Footer from '@/components/Footer.vue';
+
+>>>>>>> 07e1dd531cf67143646daf4adf3125b04818ace6
+>>>>>>> 94e719961f743980b46948d54a1c2e7dc23bbd44
 export default {
   name: "MenuList",
   data() {
@@ -181,6 +238,10 @@ export default {
         .catch(e => {
           console.log(e);
         });
+<<<<<<< HEAD
+=======
+    
+>>>>>>> 94e719961f743980b46948d54a1c2e7dc23bbd44
     },
     DropMenu(id){
       MenuService.delete(id)
@@ -204,7 +265,16 @@ export default {
 </style>
 <style>
   @import '../assets/css/DisplayMenu.css';
+<<<<<<< HEAD
 </style>
 <style>
 body,h1,h2,h3,h4,h5,h6 {font-family: "Amatic SC", sans-serif}
+=======
+<<<<<<< HEAD
+=======
+</style>
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Amatic SC", sans-serif}
+>>>>>>> 07e1dd531cf67143646daf4adf3125b04818ace6
+>>>>>>> 94e719961f743980b46948d54a1c2e7dc23bbd44
 </style>
