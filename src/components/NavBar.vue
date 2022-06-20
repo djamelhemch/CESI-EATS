@@ -21,6 +21,8 @@
     justify-content: center;width: 150px;font-weight: bolder;">Connexion</b-button></div>
       <div><b-button style="background-color: #EEEEEE; color:black;padding: 12px 16px;margin-top:20px;
     justify-content: center;width: 150px;font-weight: bolder;">Inscription</b-button></div>
+    <div style="padding-top:100px;font-size:14px;"><a href="#" style="color:black;">Restaurateurs? Devenez partenaire ICI!</a></div>
+    <div style="padding-top:20px;font-size:14px;"><a href="#" style="color:black;">Travaillez avec nous en tant que livreur !</a></div>
     <div>
         <center>
         <img alt="Vue logo" src="../assets/logo.png" class="sidemenulogo">
